@@ -1,0 +1,91 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Justin's adventures in JavaScript</title><description>Just messing about with javascript</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 11 Aug 2015 11:03:37 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>SublimeREPL require global modules in javascript (node)</title><description>&lt;p&gt;When using SublimeREPL I was having problems using globally installed node modules. For example I installed ramda globally using npm:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g ramda  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When trying to use ramda in the SublimeREPL I was getting the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; var _ = require('ramda');
+Error: Cannot find module 'ramda'  
+    at Function.Module.&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/sublimerepl-javas/</link><guid isPermaLink="false">000539da-3d20-48c4-978b-20945e5dda36</guid><category>sublime-text</category><category>javascript</category><dc:creator>Justin Ramel</dc:creator><pubDate>Mon, 10 Aug 2015 15:34:08 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/sublime-repl-require-global.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/sublime-repl-require-global.png" alt="SublimeREPL require global modules in javascript (node)"&gt;&lt;p&gt;When using SublimeREPL I was having problems using globally installed node modules. For example I installed ramda globally using npm:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g ramda  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When trying to use ramda in the SublimeREPL I was getting the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; var _ = require('ramda');
+Error: Cannot find module 'ramda'  
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at repl:1:9
+    at REPLServer.defaultEval (repl.js:132:27)
+    at bound (domain.js:254:14)
+    at REPLServer.runBound [as eval] (domain.js:267:12)
+    at REPLServer.&amp;lt;anonymous&amp;gt; (repl.js:279:12)
+    at REPLServer.emit (events.js:107:17)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Seems SublimeREPL was not picking up my &lt;code&gt;NODE_PATH&lt;/code&gt; environment settings. You can tell SublimeREPL exactly which environment settings to use in the user settings. Open the settings via the menu &lt;code&gt;Preferences &amp;gt; Package Settings &amp;gt; SublimeREPL &amp;gt; Settings - User&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  "default_extend_env": {
+    "NODE_PATH": "{NODE_PATH}:/usr/local/lib/node_modules"
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here I am setting the &lt;code&gt;NODE_PATH&lt;/code&gt; to be whatever the current &lt;code&gt;NODE_PATH&lt;/code&gt; is plus the specific directory &lt;code&gt;/usr/local/lib/node_modules&lt;/code&gt; your path may be different.&lt;/p&gt;</content:encoded></item><item><title>SublimeREPL getting the javascript (node) repl working</title><description>&lt;p&gt;When first running the node repl in SublimeREPL I was getting the error &lt;code&gt;stringToWrite must be a string&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;readline.js:220  
+    throw new TypeError('stringToWrite must be a string');
+          ^
+TypeError: stringToWrite must be a string  
+    at REPLServer._writeToOutput (readline.js:220:11)
+    at REPLServer.Interface.prompt (readline.js:188:10)&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/getting-node-repl-working-in-sublimerepl/</link><guid isPermaLink="false">09d0d190-85ed-42fd-a7b0-b2babb042562</guid><category>sublime-text</category><category>javascript</category><dc:creator>Justin Ramel</dc:creator><pubDate>Mon, 10 Aug 2015 15:00:42 GMT</pubDate><media:content url="http://localhost:2368/content/images/2015/08/sublime-repl-error-1.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2368/content/images/2015/08/sublime-repl-error-1.png" alt="SublimeREPL getting the javascript (node) repl working"&gt;&lt;p&gt;When first running the node repl in SublimeREPL I was getting the error &lt;code&gt;stringToWrite must be a string&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;readline.js:220  
+    throw new TypeError('stringToWrite must be a string');
+          ^
+TypeError: stringToWrite must be a string  
+    at REPLServer._writeToOutput (readline.js:220:11)
+    at REPLServer.Interface.prompt (readline.js:188:10)
+    at REPLServer.displayPrompt (repl.js:400:8)
+    at new REPLServer (repl.js:330:8)
+    at Object.exports.start (repl.js:339:14)
+    at /home/njr11/.config/sublime-text-3/Packages/SublimeREPL/config/NodeJS/repl.js:5:20
+    at Object.&amp;lt;anonymous&amp;gt; (/home/njr11/.config/sublime-text-3/Packages/SublimeREPL/config/NodeJS/repl.js:38:3)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+
+***Repl Closed***
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To fix this I had to change the repl config file for node in the SublimeREPL config folder.&lt;/p&gt;
+
+&lt;p&gt;Open the packages folder via Sublime menu &lt;code&gt;Preferences &amp;gt; Browse Packages...&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;From this folder navigate to &lt;code&gt;SublimeREPL/config/NodeJS/&lt;/code&gt; and edit the file &lt;code&gt;repl.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var rep = repl.start({
+        prompt:    null, //'&amp;gt; ',
+        source:    null, //process.stdin,
+        eval:      null, //require('vm').runInThisContext,
+        useGlobal: true, //false
+        useColors: false
+    });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I simply changed the prompt setting from &lt;code&gt;prompt: null, //'&amp;gt; ',&lt;/code&gt; to &lt;code&gt;prompt: '&amp;gt; '&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var rep = repl.start({
+        prompt:    '&amp;gt; ',
+        source:    null, //process.stdin,
+        eval:      null, //require('vm').runInThisContext,
+        useGlobal: true, //false
+        useColors: false
+    });
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item></channel></rss>
