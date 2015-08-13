@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Justin's adventures in JavaScript</title><description>Just messing about with javascript</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Thu, 13 Aug 2015 11:58:21 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Blog workflow</title><description>&lt;p&gt;It's probably not good that I have to write down my blog workflow, hopefully it will become second nature after a while. In the mean time this post will remind me what I need to do to create a new blog post. It will also be useful for six months&lt;/p&gt;</description><link>http://localhost:2368/blog-workflow/</link><guid isPermaLink="false">dfd633e4-5120-4edf-af4a-6e56c2090380</guid><dc:creator>Justin Ramel</dc:creator><pubDate>Tue, 11 Aug 2015 13:36:05 GMT</pubDate><content:encoded>&lt;p&gt;It's probably not good that I have to write down my blog workflow, hopefully it will become second nature after a while. In the mean time this post will remind me what I need to do to create a new blog post. It will also be useful for six months time when I've made no blog posts and can't remember how to do any of this!&lt;/p&gt;
+=======
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Justin's adventures in JavaScript</title><description>Just messing about with javascript</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 12 Aug 2015 19:50:19 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Blog workflow</title><description>&lt;p&gt;It's probably not good that I have to write down my blog workflow, hopefully it will become second nature after a while. In the mean time this post will remind me what I need to do to create a new blog post. It will also be useful for six months&lt;/p&gt;</description><link>http://localhost:2368/blog-workflow/</link><guid isPermaLink="false">dfd633e4-5120-4edf-af4a-6e56c2090380</guid><dc:creator>Justin Ramel</dc:creator><pubDate>Tue, 11 Aug 2015 13:36:05 GMT</pubDate><content:encoded>&lt;p&gt;It's probably not good that I have to write down my blog workflow, hopefully it will become second nature after a while. In the mean time this post will remind me what I need to do to create a new blog post. It will also be useful for six months time when I've made no blog posts and can't remember how to do any of this!&lt;/p&gt;
+>>>>>>> e2d33c3b9e8f8ad330c7068f928af8b757932ccc
 
 &lt;h2 id="1startghostserver"&gt;1. Start Ghost Server&lt;/h2&gt;
 
@@ -19,7 +23,11 @@ npm start
 &lt;p&gt;Again from the Ghost installation folder run Buster to generate the static site and deploy to Github:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cd /media/njr11/Booty/Dropbox/Blog/ghost-javascript  
+<<<<<<< HEAD
 buster generate  
+=======
+buster generate --domain localhost:2368  
+>>>>>>> e2d33c3b9e8f8ad330c7068f928af8b757932ccc
 buster deploy  
 &lt;/code&gt;&lt;/pre&gt;
 
