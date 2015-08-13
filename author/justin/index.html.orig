@@ -1,0 +1,163 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Justin Ramel - Page 1 - Justin's adventures in JavaScript</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+<<<<<<< HEAD
+    <link rel="stylesheet" type="text/css" href="../../assets/css/screen.css?v=d6fa9c1491">
+=======
+    <link rel="stylesheet" type="text/css" href="../../assets/css/screen.css?v=745ee07756">
+>>>>>>> e2d33c3b9e8f8ad330c7068f928af8b757932ccc
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    
+    <meta property="og:site_name" content="Justin's adventures in JavaScript">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Justin Ramel - Page 1 - Justin's adventures in JavaScript">
+    <meta property="og:url" content="http://localhost:2368/author/justin/">
+    <meta property="og:image" content="http://localhost:2368/content/images/2015/08/spain.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Justin Ramel - Page 1 - Justin's adventures in JavaScript">
+    <meta name="twitter:url" content="http://localhost:2368/author/justin/">
+    <meta name="twitter:image:src" content="http://localhost:2368/content/images/2015/08/spain.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "publisher": "Justin's adventures in JavaScript",
+    "name": "Justin Ramel",
+    "url": "http://localhost:2368/author/justin",
+    "image": "http://localhost:2368/content/images/2015/08/spain.jpg"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="Justin's adventures in JavaScript" href="../../rss/index.html">
+</head>
+<body class="author-template author-justin nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="../../">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+    <header class="main-header author-head " style="background-image: url(../../content/images/2015/08/spain.jpg)">
+        <nav class="main-nav overlay clearfix">
+            
+                <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+        </nav>
+    </header>
+
+    <section class="author-profile inner">
+        <figure class="author-image">
+            <div class="img" style="background-image: url(http://www.gravatar.com/avatar/d969a33f2d9bf6e75ffcbdd9be99d6bd?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Justin Ramel's Picture</span></div>
+        </figure>
+        <h1 class="author-title">Justin Ramel</h1>
+        <div class="author-meta">
+            <span class="author-location icon-location">Newcastle upon Tyne</span>
+            
+            <span class="author-stats"><i class="icon-stats"></i> 3 posts</span>
+        </div>
+    </section>
+
+<main class="content" role="main">
+
+    <div class="extra-pagination inner">
+    <nav class="pagination" role="navigation">
+    <span class="page-number">Page 1 of 1</span>
+</nav>
+</div>
+
+<article class="post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="../../blog-workflow/">Blog workflow</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>It's probably not good that I have to write down my blog workflow, hopefully it will become second nature after a while. In the mean time <a class="read-more" href="../../blog-workflow/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        <img class="author-thumb" src="http://www.gravatar.com/avatar/d969a33f2d9bf6e75ffcbdd9be99d6bd?s=250&amp;d=mm&amp;r=x" alt="Justin Ramel" nopin="nopin">
+        <a href="index.html">Justin Ramel</a>
+        
+        <time class="post-date" datetime="2015-08-11">11 August 2015</time>
+    </footer>
+</article>
+<article class="post tag-sublime-text tag-javascript">
+    <header class="post-header">
+        <h2 class="post-title"><a href="../../sublimerepl-javas/">SublimeREPL require global modules in javascript (node)</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>When using SublimeREPL I was having problems using globally installed node modules. For example I installed ramda globally using npm: npm install -g ramda   When trying <a class="read-more" href="../../sublimerepl-javas/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        <img class="author-thumb" src="http://www.gravatar.com/avatar/d969a33f2d9bf6e75ffcbdd9be99d6bd?s=250&amp;d=mm&amp;r=x" alt="Justin Ramel" nopin="nopin">
+        <a href="index.html">Justin Ramel</a>
+         on <a href="../../tag/sublime-text/">sublime-text</a>, <a href="../../tag/javascript/">javascript</a>
+        <time class="post-date" datetime="2015-08-10">10 August 2015</time>
+    </footer>
+</article>
+<article class="post tag-sublime-text tag-javascript">
+    <header class="post-header">
+        <h2 class="post-title"><a href="../../getting-node-repl-working-in-sublimerepl/">SublimeREPL getting the javascript (node) repl working</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>When first running the node repl in SublimeREPL I was getting the error stringToWrite must be a string: readline.js:220       throw new TypeError('stringToWrite must <a class="read-more" href="../../getting-node-repl-working-in-sublimerepl/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        <img class="author-thumb" src="http://www.gravatar.com/avatar/d969a33f2d9bf6e75ffcbdd9be99d6bd?s=250&amp;d=mm&amp;r=x" alt="Justin Ramel" nopin="nopin">
+        <a href="index.html">Justin Ramel</a>
+         on <a href="../../tag/sublime-text/">sublime-text</a>, <a href="../../tag/javascript/">javascript</a>
+        <time class="post-date" datetime="2015-08-10">10 August 2015</time>
+    </footer>
+</article>
+
+<nav class="pagination" role="navigation">
+    <span class="page-number">Page 1 of 1</span>
+</nav>
+
+</main>
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../../">Justin's adventures in JavaScript</a> © 2015</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+<<<<<<< HEAD
+    <script src="../../public/jquery.js?v=d6fa9c1491"></script>
+
+    <script type="text/javascript" src="../../assets/js/jquery.fitvids.js?v=d6fa9c1491"></script>
+    <script type="text/javascript" src="../../assets/js/index.js?v=d6fa9c1491"></script>
+=======
+    <script src="../../public/jquery.js?v=745ee07756"></script>
+
+    <script type="text/javascript" src="../../assets/js/jquery.fitvids.js?v=745ee07756"></script>
+    <script type="text/javascript" src="../../assets/js/index.js?v=745ee07756"></script>
+>>>>>>> e2d33c3b9e8f8ad330c7068f928af8b757932ccc
+
+</body>
