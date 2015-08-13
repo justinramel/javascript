@@ -1,0 +1,206 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SublimeREPL getting the javascript (node) repl working</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=d6fa9c1491">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    
+    <meta property="og:site_name" content="Justin's adventures in JavaScript">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SublimeREPL getting the javascript (node) repl working">
+    <meta property="og:description" content="When first running the node repl in SublimeREPL I was getting the error stringToWrite must be a string: readline.js:220       throw new TypeError('stringToWrite must be a string');           ^ TypeError: stringToWrite must be a string       at REPLServer._writeToOutput (readline.js:...">
+    <meta property="og:url" content="http://localhost:2368/getting-node-repl-working-in-sublimerepl/">
+    <meta property="og:image" content="http://localhost:2368/content/images/2015/08/sublime-repl-error-1.png">
+    <meta property="article:published_time" content="2015-08-10T15:00:42.975Z">
+    <meta property="article:modified_time" content="2015-08-10T15:38:23.332Z">
+    <meta property="article:tag" content="sublime-text">
+    <meta property="article:tag" content="javascript">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SublimeREPL getting the javascript (node) repl working">
+    <meta name="twitter:description" content="When first running the node repl in SublimeREPL I was getting the error stringToWrite must be a string: readline.js:220       throw new TypeError('stringToWrite must be a string');           ^ TypeError: stringToWrite must be a string       at REPLServer._writeToOutput (readline.js:...">
+    <meta name="twitter:url" content="http://localhost:2368/getting-node-repl-working-in-sublimerepl/">
+    <meta name="twitter:image:src" content="http://localhost:2368/content/images/2015/08/sublime-repl-error-1.png">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Justin's adventures in JavaScript",
+    "author": {
+        "@type": "Person",
+        "name": "Justin Ramel",
+        "image": "//www.gravatar.com/avatar/d969a33f2d9bf6e75ffcbdd9be99d6bd?s=250&d=mm&r=x",
+        "url": "http://localhost:2368/author/justin",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "SublimeREPL getting the javascript (node) repl working",
+    "url": "http://localhost:2368/getting-node-repl-working-in-sublimerepl/",
+    "datePublished": "2015-08-10T15:00:42.975Z",
+    "dateModified": "2015-08-10T15:38:23.332Z",
+    "image": "http://localhost:2368/content/images/2015/08/sublime-repl-error-1.png",
+    "keywords": "sublime-text, javascript",
+    "description": "When first running the node repl in SublimeREPL I was getting the error stringToWrite must be a string: readline.js:220       throw new TypeError(&#x27;stringToWrite must be a string&#x27;);           ^ TypeError: stringToWrite must be a string       at REPLServer._writeToOutput (readline.js:..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.6">
+    <link rel="alternate" type="application/rss+xml" title="Justin's adventures in JavaScript" href="../rss/index.html">
+</head>
+<body class="post-template tag-sublime-text tag-javascript nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="../">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head " style="background-image: url(../content/images/2015/08/sublime-repl-error-1.png)">
+    <nav class="main-nav overlay clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-sublime-text tag-javascript">
+
+        <header class="post-header">
+            <h1 class="post-title">SublimeREPL getting the javascript (node) repl working</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2015-08-10">10 August 2015</time>  on <a href="../tag/sublime-text/">sublime-text</a>, <a href="../tag/javascript/">javascript</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>When first running the node repl in SublimeREPL I was getting the error <code>stringToWrite must be a string</code>:</p>
+
+<pre><code>readline.js:220  
+    throw new TypeError('stringToWrite must be a string');
+          ^
+TypeError: stringToWrite must be a string  
+    at REPLServer._writeToOutput (readline.js:220:11)
+    at REPLServer.Interface.prompt (readline.js:188:10)
+    at REPLServer.displayPrompt (repl.js:400:8)
+    at new REPLServer (repl.js:330:8)
+    at Object.exports.start (repl.js:339:14)
+    at /home/njr11/.config/sublime-text-3/Packages/SublimeREPL/config/NodeJS/repl.js:5:20
+    at Object.&lt;anonymous&gt; (/home/njr11/.config/sublime-text-3/Packages/SublimeREPL/config/NodeJS/repl.js:38:3)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+
+***Repl Closed***
+</code></pre>
+
+<p>To fix this I had to change the repl config file for node in the SublimeREPL config folder.</p>
+
+<p>Open the packages folder via Sublime menu <code>Preferences &gt; Browse Packages...</code></p>
+
+<p>From this folder navigate to <code>SublimeREPL/config/NodeJS/</code> and edit the file <code>repl.js</code>:</p>
+
+<pre><code>    var rep = repl.start({
+        prompt:    null, //'&gt; ',
+        source:    null, //process.stdin,
+        eval:      null, //require('vm').runInThisContext,
+        useGlobal: true, //false
+        useColors: false
+    });
+</code></pre>
+
+<p>I simply changed the prompt setting from <code>prompt: null, //'&gt; ',</code> to <code>prompt: '&gt; '</code>.</p>
+
+<pre><code>    var rep = repl.start({
+        prompt:    '&gt; ',
+        source:    null, //process.stdin,
+        eval:      null, //require('vm').runInThisContext,
+        useGlobal: true, //false
+        useColors: false
+    });
+</code></pre>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/justin/" style="background-image: url(http://www.gravatar.com/avatar/d969a33f2d9bf6e75ffcbdd9be99d6bd?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Justin Ramel's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/justin/">Justin Ramel</a></h4>
+
+                    <p>Read <a href="../author/justin/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Newcastle upon Tyne</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=SublimeREPL%20getting%20the%20javascript%20(node)%20repl%20working&amp;url=http://localhost:2368/getting-node-repl-working-in-sublimerepl/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/getting-node-repl-working-in-sublimerepl/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/getting-node-repl-working-in-sublimerepl/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story " style="background-image: url(../content/images/2015/08/sublime-repl-require-global.png)" href="../sublimerepl-javas/">
+        <section class="post">
+            <h2>SublimeREPL require global modules in javascript (node)</h2>
+            <p>When using SublimeREPL I was having problems using globally installed node modules. For example I installed ramda globally using…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Justin's adventures in JavaScript</a> © 2015</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script src="../public/jquery.js?v=d6fa9c1491"></script>
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=d6fa9c1491"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=d6fa9c1491"></script>
+
+</body>
